@@ -21,8 +21,20 @@
 </form>
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $nome = $_POST['nome'];
-        $idade = $_POST['idade'];
+        $nome = $_POST['nome'] ?? "";
+        $idade = $_POST['idade'] ?? 0;
+        if($nome != "" && $idade > 0){
+            $qtd = strlen($nome);
+            echo "<p>Qtde de caracteres do nome: $qtd<p>";
+            echo "<p>Maiúsculo: ".strtoupper($nome)."</p>";
+            $s = str_replace("a", "4", $nome);
+            echo "<p>Substituição do a: $s </p>";
+            $dia = date("d");
+            echo "<p>Dia: $d</p>";
+            $mes = date("m");
+            echo "<p>Mês: $mes</p>";
+            $tempo = date("d/m/Y H:i:s");
+        }
     }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
