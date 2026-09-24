@@ -7,6 +7,7 @@
 <body>
     <h1>Exercícios da Lista 2</h1>
     <ul>
+        <li><a href="/Eletiva1/">Voltar</a></li>
         <li><a href="ex1.php">Exercício 1</a></li>
         <li><a href="ex2.php">Exercício 2</a></li>
         <li><a href="ex3.php">Exercício 3</a></li>
